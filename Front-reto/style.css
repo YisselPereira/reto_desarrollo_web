@@ -1,0 +1,68 @@
+.titulo{
+    color: #925052;
+    text-align: center;
+    width: 90%;
+}
+#principal{
+    background-color: wheat;
+    margin: 10%;
+    width: 80%;
+}
+#crear{
+    display: flex;
+    background-color: #925052;
+    border-color: antiquewhite;
+    border-color: black;
+}
+#crear:hover{
+    display: flex;
+}
+#borrar27{
+    margin: 15px;
+}
+.EliminarTarea{
+    background-color: transparent;
+    border-color: transparent;
+    color: red;
+}
+.eliminar{
+    background-color: transparent;
+    border-color: transparent;
+    color: red;
+}
+.agregarSubList{
+    display: inline-block;
+    background-color: #c77770 !important;
+    border-color: black;
+}
+.editar{
+    background-color: transparent;
+    border-color: transparent;
+    color: #5DADE2;
+}
+#nombre-lista{
+    text-align: center;
+    width: 90%;
+}
+input.form-control{
+    width: 90%;
+    display: inline-block;
+
+}
+td,th{
+    border-color: black !important;
+}
+.actualizarSubList{
+    background-color: #c77770;
+    color: white;
+    border-color: black;
+
+}
+body{
+    background-color: #925052;
+}
+.color1 {color: #51272e;}
+.color2 {color: #6b353a;}
+.color3 {color: #925052;}
+.color4 {color: #c77770;}
+.color5 {color: #f4a594;}

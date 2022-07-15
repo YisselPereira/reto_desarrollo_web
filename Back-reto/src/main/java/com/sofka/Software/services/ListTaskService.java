@@ -1,18 +1,25 @@
 package com.sofka.Software.services;
 
+import com.sofka.Software.models.ListModel;
 import com.sofka.Software.models.ListTaskModel;
 import com.sofka.Software.repositories.ListTaskRepository;
-//import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.*;
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 
 @Service
 public class ListTaskService {
     @Autowired
     private ListTaskRepository listTaskRepository;
+
     public Iterable<ListTaskModel> list(){
         return listTaskRepository.findAll();
+    }
+    public ArrayList<ListTaskModel> obtenerTareasPorListAndCompleted(ListModel lista, Boolean completed)  {
+        return listTaskRepository.findAllByListaidAndCompleted(lista, completed);
     }
 
     /**
@@ -53,4 +60,4 @@ public class ListTaskService {
         listTaskRepository.save(listTask);
         return listTask;
     }
-//}
+}

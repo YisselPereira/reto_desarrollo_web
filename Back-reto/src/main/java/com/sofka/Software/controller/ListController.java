@@ -2,12 +2,9 @@ package com.sofka.Software.controller;
 
 import com.sofka.Software.models.ListModel;
 import com.sofka.Software.services.ListService;
-//import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
-@Slf4j
 @CrossOrigin
 @RestController
 public class ListController {
@@ -19,13 +16,13 @@ public class ListController {
             return listRepository.list();
         }
 
-        @PostMapping(value = "/task")
+        @PostMapping(value = "/lista")
         public ListModel createList(@RequestBody ListModel lista){
             return listRepository.createList(lista);
         }
 
-         @DeleteMapping(value = "/task/{id}")
-         public void deleteTask(@PathVariable("id")Long id){
-         listRepository.deleteTask(id);
+         @DeleteMapping(value = "/lista/{id}")
+         public void deleteList(@PathVariable("id")Long id){
+         listRepository.deleteList(id);
          }
 }
